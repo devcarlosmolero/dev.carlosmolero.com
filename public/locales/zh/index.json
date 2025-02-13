@@ -1,0 +1,14 @@
+{
+    "metas": {
+      "title": "",
+      "description": ""
+    },
+    "topHeader": "马拉加自由职业软件和应用开发者",
+    "paragraphs": [
+      "这里还没有内容..."
+    ],
+    "servicesHeader": "我能为你或你的企业做些什么？",
+    "services": ["应用程序开发", "网站开发", "UX/UI设计", "人工智能和自动化", "集成", "咨询", "基础设施和DevOps"],
+    "resourcesHeader": "资源、模板和更多",
+    "latestBlogPostsHeader": "有时我会写一些有趣的东西"
+  }

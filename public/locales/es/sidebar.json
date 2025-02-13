@@ -1,0 +1,22 @@
+{
+    "jobTitle": "Desarrollador de Apps y Software Freelance",
+    "bookButton": "Contrátame",
+    "navLinks": [
+      {
+        "title": "Inicio",
+        "key": "home"
+      },
+      {
+        "title": "Blog",
+        "key": "blog"
+      },
+      {
+        "title": "Recursos",
+        "key": "resources"
+      }
+    ],
+    "footer": {
+      "rights": "Carlos Molero. Todos los derechos reservados.",
+      "checkTheCode": "El código de este sitio es Open Source y puede ser consultado en Github."
+    }
+  }

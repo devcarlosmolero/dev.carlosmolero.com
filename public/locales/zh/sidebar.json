@@ -1,0 +1,22 @@
+{
+    "jobTitle": "自由职业应用程序和软件开发人员",
+    "bookButton": "雇佣我",
+    "navLinks": [
+      {
+        "title": "首页",
+        "key": "home"
+      },
+      {
+        "title": "博客",
+        "key": "blog"
+      },
+      {
+        "title": "资源",
+        "key": "resources"
+      }
+    ],
+    "footer": {
+      "rights": "Carlos Molero。保留所有权利。",
+      "checkTheCode": "本网站的代码是开源的，可以在Github上查看。"
+    }
+  }

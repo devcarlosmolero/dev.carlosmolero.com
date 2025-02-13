@@ -1,0 +1,22 @@
+{
+    "jobTitle": "Freelance App and Software Developer",
+    "bookButton": "Hire Me",
+    "navLinks": [
+      {
+        "title": "Home",
+        "key": "home"
+      },
+      {
+        "title": "Blog",
+        "key": "blog"
+      },
+      {
+        "title": "Resources",
+        "key": "resources"
+      }
+    ],
+    "footer": {
+      "rights": "Carlos Molero. All rights reserved.",
+      "checkTheCode": "The code for this site is Open Source and can be checked on Github."
+    }
+  }
