@@ -10,7 +10,7 @@ export default function ServicesButtonGroup({ labels }: { labels: string[] }) {
                     className="flex items-center gap-x-3"
                     key={label}
                     url={
-                        'https://cal.com/psicarlosmolero/psicoterapia?duration=60'
+                        'https://cal.com/devcarlosmolero/hire-me-meeting'
                     }
                     target={'_blank'}
                 >
