@@ -101,7 +101,7 @@ export default function BlogPostPage() {
                         )}
                     <hr className="!border-[#E4E4E4]" />
 
-                    <article className="prose-dark prose w-full !max-w-none prose-h2:tracking-tighter prose-h3:tracking-tighter prose-h4:tracking-tighter prose-img:w-full prose-img:rounded-lg [&_h2:first-of-type]:mt-0">
+                    <article className="prose-dark prose w-full max-w-[500px] prose-h2:tracking-tighter prose-h3:tracking-tighter prose-h4:tracking-tighter prose-img:w-full prose-img:rounded-lg [&_h2:first-of-type]:mt-0">
                         <Markdown
                             remarkPlugins={[remarkGfm]}
                             rehypePlugins={[rehypeSlug, rehypeRaw]}

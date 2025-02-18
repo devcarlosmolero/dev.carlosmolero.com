@@ -5,11 +5,8 @@ services:
     image: node:20
     container_name: dev_carlosmolero_web_dev
     working_dir: /app
-    tty: true
-    environment:
-      - CHOKIDAR_USEPOLLING=true
     volumes:
       - ./:/app
     ports:
       - "3000:3000"
-    command: sh -c "npm i && npm run dev"
+    command: sh -c "npm i -g pnpm && pnpm i && pnpm run dev"
