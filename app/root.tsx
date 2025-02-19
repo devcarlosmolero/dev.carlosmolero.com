@@ -22,10 +22,11 @@ export async function loader({ request, context }: LoaderFunctionArgs) {
   const hostname = url.hostname;
   const hasWWW = hostname.includes("www");
   const isLocal = hostname.includes(SITE_BASE_URL_DOMAIN_DEV);
+  const searchString = url.search;
 
 
   if (!hasWWW && !isLocal) {
-    return redirect(`${SITE_BASE_URL}${pathname}`, { status: 301 });
+    return redirect(`${SITE_BASE_URL}${pathname}${searchString}`, { status: 301 });
   }
 
   const localeCookieHeader = request.headers.get("Cookie");
@@ -35,12 +36,12 @@ export async function loader({ request, context }: LoaderFunctionArgs) {
 
   if (localeCookieValue?.locale && localeCookieValue.locale !== localeFromPathname) {
     const newPathname = pathname.replace(`/${localeFromPathname}`, "") || "/";
-    const newUrl = `${ServerUtils.getSiteBaseUrl(context)}/${localeCookieValue.locale}${newPathname}`;
+    const newUrl = `${ServerUtils.getSiteBaseUrl(context)}/${localeCookieValue.locale}${newPathname}${searchString}`;
     return redirect(newUrl, { status: 301 });
   }
 
   if (!localeFromPathname) {
-    const newUrl = `${ServerUtils.getSiteBaseUrl(context)}/${SITE_DEFAULT_LOCALE}${pathname}`;
+    const newUrl = `${ServerUtils.getSiteBaseUrl(context)}/${SITE_DEFAULT_LOCALE}${pathname}${searchString}`;
     return redirect(newUrl, { status: 301 });
   }
 

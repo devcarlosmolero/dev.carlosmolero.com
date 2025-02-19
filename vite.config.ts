@@ -8,6 +8,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   server: {
     port: 3000,
+    allowedHosts: ["dev.carlosmolero.com"]
   },
   assetsInclude: ["**/*.md"],
   plugins: [
