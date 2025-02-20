@@ -1,4 +1,4 @@
-import { BookOpen, Calendar, ChevronRight, Folder, Home } from "lucide-react";
+import { BookOpen, Calendar, ChevronRight, Folder, Home, PaintBucket } from "lucide-react";
 import { Fragment, ReactNode } from "react";
 import { Github } from "react-bootstrap-icons";
 import GitHubCalendar from "react-github-calendar";
@@ -8,27 +8,33 @@ import Button from "../atoms/Button";
 import SocialIcons from "../molecules/SocialIcons";
 import LanguageSwitcher from "../organisms/LanguageSwitcher";
 
-function getNavLinkData(key:string){
-  switch(key){
+function getNavLinkData(key: string) {
+  switch (key) {
     case "home":
-        return {
-          icon: <Home className="size-5 duration-500 group-hover:translate-x-3" />,
-          pathname: "/"
-        }
-      case "blog":
-        return {
-          icon: <BookOpen className="size-5 duration-500 group-hover:translate-x-3" />,
-          pathname: "/blog"
-        }
-      case "resources":
-        return {
-          icon: <Folder className="size-5 duration-500 group-hover:translate-x-3" />,
-          pathname: "/resources"
-        }
+      return {
+        icon: <Home className="size-5 duration-500 group-hover:translate-x-3" />,
+        pathname: "/"
+      }
+    case "blog":
+      return {
+        icon: <BookOpen className="size-5 duration-500 group-hover:translate-x-3" />,
+        pathname: "/blog"
+      }
+    case "resources":
+      return {
+        icon: <Folder className="size-5 duration-500 group-hover:translate-x-3" />,
+        pathname: "/resources"
+      }
+    case "uxui":
+      return {
+        icon: <PaintBucket className="size-5 duration-500 group-hover:translate-x-3" />,
+        pathname: "https://dribbble.com/devcarlosmolero",
+        target: "_blank"
+      }
   }
 }
 
-function Root({children}:{children:ReactNode}) {
+function Root({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-[100vh] items-center justify-center bg-gray-100">
       <div className="min-h-[100vh] w-[1366px] rounded-lg bg-white xl:h-[768px] xl:min-h-[768px] xl:shadow-lg">
@@ -38,7 +44,7 @@ function Root({children}:{children:ReactNode}) {
   );
 }
 
-function Left({children, translation}:IComponentWithTranslation & {children:ReactNode}) {
+function Left({ children, translation }: IComponentWithTranslation & { children: ReactNode }) {
   return (
     <div className="flex w-full flex-col overflow-y-scroll py-6">
       {children}
@@ -49,7 +55,7 @@ function Left({children, translation}:IComponentWithTranslation & {children:Reac
             <div className="w-full flex-col">
               <Github className="mb-2 size-5 text-gray-600" />
               <p className="text-xs text-gray-600">
-              {(translation as any).footer.rights}
+                {(translation as any).footer.rights}
               </p>
               <div className="group mt-1 flex w-full flex-col items-start gap-x-2 gap-y-2 md:flex-row md:items-center">
                 <a
@@ -64,7 +70,7 @@ function Left({children, translation}:IComponentWithTranslation & {children:Reac
                 </a>
               </div>
               <div className="mt-5">
-                <LanguageSwitcher/>
+                <LanguageSwitcher />
               </div>
             </div>
           </div>
@@ -74,15 +80,15 @@ function Left({children, translation}:IComponentWithTranslation & {children:Reac
   );
 }
 
-function Right({children}:{children:ReactNode}) {
+function Right({ children }: { children: ReactNode }) {
   return (
-    <div className="hidden min-h-[100vh] w-[400px] w-auto flex-col gap-y-5 border-l border-[#E4E4E4]/50 px-5 py-6 shadow md:flex lg:shadow-none xl:min-h-full">
+    <div className="hidden min-h-[100vh] w-[400px] flex-col gap-y-5 border-l border-[#E4E4E4]/50 px-5 py-6 shadow md:flex lg:shadow-none xl:min-h-full">
       {children}
     </div>
   );
 }
 
-function BookButton({translation}:IComponentWithTranslation) {
+function BookButton({ translation }: IComponentWithTranslation) {
   return (
     <Button
       url="https://cal.com/devcarlosmolero/hire-me-meeting"
@@ -100,18 +106,18 @@ function BookButton({translation}:IComponentWithTranslation) {
   );
 }
 
-function NavLinks({translation}:IComponentWithTranslation) {
+function NavLinks({ translation }: IComponentWithTranslation) {
   return (
     <Fragment>
       {" "}
-      {(translation.navLinks as unknown as any[]).map((navLink:any) => {
+      {(translation.navLinks as unknown as any[]).map((navLink: any) => {
         const data = getNavLinkData(navLink.key)
         return (
           <Button
             className="group !py-0"
             url={data?.pathname}
             variant="ghost"
-            target="_self"
+            target={(data?.target as any) ?? "_self"}
             key={navLink.title}
           >
             {data?.icon}
@@ -137,7 +143,7 @@ function Map() {
   );
 }
 
-function UserPart({translation}:IComponentWithTranslation) {
+function UserPart({ translation }: IComponentWithTranslation) {
   return (
     <Fragment>
       <div className="flex min-w-[250px] gap-5 rounded-lg p-5 shadow-lg">

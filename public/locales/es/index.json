@@ -1,14 +1,19 @@
 {
-    "metas": {
-      "title": "",
-      "description": ""
-    },
-    "topHeader": "Desarrollador de Software y Aplicaciones Freelance en Málaga",
-    "paragraphs": [
-      "Aún no hay nada por aquí..."
-    ],
-    "servicesHeader": "¿Qué puedo hacer por ti o por tu negocio?",
-    "services": ["Desarrollo de Apps", "Desarrollo Web", "Diseño UX/UI", "IA y Automatizaciones", "Integraciones", "Consultoría", "Infraestructura y DevOps"],
-    "resourcesHeader": "Recursos, plantillas y más",
-    "latestBlogPostsHeader": "A veces escribo cosas interesantes"
-  }
+  "metas": {
+    "title": "Desarrollador de Software y Aplicaciones Freelance en Málaga",
+    "description": "Carlos Molero, Ingeniero de Software y diseñador UX/UI freelance con 8 años de experiencia. Ofrezco servicios de desarrollo de apps, web, diseño UX/UI, IA, automatizaciones, integraciones, consultoría y DevOps en Málaga."
+  },
+  "topHeader": "Desarrollador de Software y Aplicaciones Freelance en Málaga",
+  "paragraphs": [
+    "Bueno, bueno, bueno... Es obvio que si has llegado a esta página es que algo estabas buscando.",
+    "¿Verdad? 😏",
+    "Sea lo que sea, yo me voy a presentar y tú ya haces lo que te parezca.",
+    "Mi nombre es Carlos y soy Ingeniero de Software y diseñador UX/UI, para empezar con una obviedad, y me dedico a esto del software desde hace unos 8 años.",
+    "He trabajado para grandes consultoras, startups que iban peladas de dinero y, en los últimos años, como freelancer.",
+    "Aquí podrás encontrar toda la información acerca de los servicios que presto, mis redes sociales y saber un poco más de mí y de mi trabajo a través de lo que escribo y comparto."
+  ],
+  "servicesHeader": "¿Qué puedo hacer por ti o por tu negocio?",
+  "services": ["Desarrollo de Apps", "Desarrollo Web", "Diseño UX/UI", "IA y Automatizaciones", "Integraciones", "Consultoría", "Infraestructura y DevOps"],
+  "resourcesHeader": "Recursos, plantillas y más",
+  "latestBlogPostsHeader": "A veces escribo cosas interesantes"
+}

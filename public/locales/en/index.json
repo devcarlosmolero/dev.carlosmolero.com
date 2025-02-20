@@ -1,14 +1,19 @@
 {
   "metas": {
-    "title": "",
-    "description": ""
+    "title": "Freelance Software and App Developer in Malaga",
+    "description": "Carlos, Software Engineer and UX/UI Designer with 8 years of experience, offers app development, web development, UX/UI design, AI, automation, integrations, consulting, and DevOps services in Malaga."
   },
   "topHeader": "Freelance Software and App Developer in Malaga",
   "paragraphs": [
-    "There's nothing here yet..."
+    "Well, well, well... It's obvious that if you've reached this page, you were looking for something.",
+    "Right? 😏",
+    "Whatever it is, I'm going to introduce myself, and you can do whatever you think is best.",
+    "My name is Carlos, and I am a Software Engineer and UX/UI Designer, to start with the obvious, and I've been working in software for about 8 years.",
+    "I've worked for large consulting firms, startups that were strapped for cash, and, in recent years, as a freelancer.",
+    "Here you can find all the information about the services I offer, my social media, and learn more about me and my work through what I write and share."
   ],
   "servicesHeader": "What can I do for you or your business?",
-  "services": ["App Development", "Web Development", "UX/UI Design", "AI and Automations", "Integrations", "Consulting", "Infrastructure and DevOps"],
+  "services": ["App Development", "Web Development", "UX/UI Design", "AI and Automation", "Integrations", "Consulting", "Infrastructure and DevOps"],
   "resourcesHeader": "Resources, templates, and more",
   "latestBlogPostsHeader": "Sometimes I write interesting things"
 }

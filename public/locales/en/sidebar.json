@@ -13,6 +13,10 @@
       {
         "title": "Resources",
         "key": "resources"
+      },
+      {
+        "title": "UX/UI Design Gallery",
+        "key": "uxui"
       }
     ],
     "footer": {
