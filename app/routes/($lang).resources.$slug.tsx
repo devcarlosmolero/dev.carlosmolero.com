@@ -99,7 +99,7 @@ export default function ResourcePage() {
                             </div>
                         </div>
                         <hr className="!border-[#E4E4E4]" />
-                        <article className="prose-dark prose-pre:bg-[#22272e] prose-pre:break-words prose-pre:whitespace-pre-wrap prose-pre:overflow-x-auto prose w-full !max-w-none prose-img:w-full prose-img:rounded-xl [&_h2:first-of-type]:mt-0">
+                        <article className="prose-dark prose-pre:!p-0 prose-pre:bg-[#22272e] prose-pre:break-words prose-pre:whitespace-pre-wrap prose-pre:overflow-x-auto prose w-full !max-w-none prose-img:w-full prose-img:rounded-xl [&_h2:first-of-type]:mt-0">
                             <Markdown
                                 remarkPlugins={[remarkGfm]}
                                 rehypePlugins={[rehypeSlug, rehypeRaw]}

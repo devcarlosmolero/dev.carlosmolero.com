@@ -103,7 +103,7 @@ export default function BlogPostPage() {
                             )}
                         <hr className="!border-[#E4E4E4]" />
 
-                        <article className="prose-dark prose-pre:bg-[#22272e] prose-pre:break-words prose-pre:whitespace-pre-wrap prose-pre:overflow-x-auto prose w-full max-w-[500px] prose-h2:tracking-tighter prose-h3:tracking-tighter prose-h4:tracking-tighter prose-img:w-full prose-img:rounded-lg [&_h2:first-of-type]:mt-0">
+                        <article className="prose-dark prose-pre:!p-0 prose-pre:bg-[#22272e] prose-pre:break-words prose-pre:whitespace-pre-wrap prose-pre:overflow-x-auto prose w-full max-w-[500px] prose-h2:tracking-tighter prose-h3:tracking-tighter prose-h4:tracking-tighter prose-img:w-full prose-img:rounded-lg [&_h2:first-of-type]:mt-0">
                             <Markdown
                                 remarkPlugins={[remarkGfm]}
                                 rehypePlugins={[rehypeSlug, rehypeRaw]}
