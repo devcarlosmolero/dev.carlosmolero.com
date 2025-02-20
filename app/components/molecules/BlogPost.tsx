@@ -26,7 +26,7 @@ export default function BlogPost({
                         <p className="mb-3 text-xs text-gray-600">
                             {post.formattedUpdatedAt}
                         </p>
-                        <h3 className="text-xl">{post.seoTitle}</h3>
+                        <h3 className="text-xl line-clamp-2">{post.seoTitle}</h3>
                         <p className="line-clamp-3 text-sm text-gray-600">
                             {post.seoDescription}
                         </p>
