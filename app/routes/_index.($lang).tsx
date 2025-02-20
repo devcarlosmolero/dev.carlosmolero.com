@@ -58,54 +58,53 @@ export default function IndexPage() {
 
   return (
     <Fragment>
-      <Navbar translation={(translation as any).sidebar}/>
+      <Navbar translation={(translation as any).sidebar} />
       <SidebarLayout.Root>
-      <SidebarLayout.Left translation={(translation as any).sidebar}>
-        <Container className="space-y-8">
-          <div className="w-full space-y-5">
-            <h1 className="text-4xl font-bold tracking-tighter">
-              {(translation as any).index.topHeader}
-            </h1>
-            <div className="space-y-5">
-              {(translation as any).index.paragraphs.map((p:string)=> <p dangerouslySetInnerHTML={{__html: p}}/>)}
-
+        <SidebarLayout.Left translation={(translation as any).sidebar}>
+          <Container className="space-y-8">
+            <div className="w-full space-y-5">
+              <h1 className="text-4xl font-bold tracking-tighter">
+                {(translation as any).index.topHeader}
+              </h1>
+              <div className="space-y-5">
+                {(translation as any).index.paragraphs.map((p: string, index: number) => <p key={index} dangerouslySetInnerHTML={{ __html: p }} />)}
+              </div>
             </div>
-          </div>
-          <div className="w-full space-y-5">
-            <h2 className="text-3xl font-bold tracking-tighter">
-            {(translation as any).index.servicesHeader}
-            </h2>
-            <ServicesButtonGroup
-              labels={(translation as any).index.services}
-            />
-          </div>
-          <div className="w-full space-y-5">
-            <h2 className="text-3xl font-bold tracking-tighter">
-            {(translation as any).index.resourcesHeader}
-            </h2>
-            <ResourcesLinkGroup        translation={translation} resources={resources as IResource[]} />
-          </div>
-          <div className="w-full space-y-5">
-            <h2 className="text-3xl font-bold tracking-tighter">
-            {(translation as any).index.latestBlogPostsHeader}
-            </h2>
-            <BlogPostsGroup        translation={translation}
-              posts={
-                posts?.map((post) => {
-                  return {
-                    ...post,
-                    slug: `/blog/${post.slug}`,
-                  };
-                }) as IBlogPost[]
-              }
-            />
-          </div>
-        </Container>
-      </SidebarLayout.Left>
-      <SidebarLayout.Right>
-        <SidebarLayout.UserPart translation={(translation as any).sidebar} />
-      </SidebarLayout.Right>
-    </SidebarLayout.Root>
+            <div className="w-full space-y-5">
+              <h2 className="text-3xl font-bold tracking-tighter">
+                {(translation as any).index.servicesHeader}
+              </h2>
+              <ServicesButtonGroup
+                labels={(translation as any).index.services}
+              />
+            </div>
+            <div className="w-full space-y-5">
+              <h2 className="text-3xl font-bold tracking-tighter">
+                {(translation as any).index.resourcesHeader}
+              </h2>
+              <ResourcesLinkGroup translation={translation} resources={resources as IResource[]} />
+            </div>
+            <div className="w-full space-y-5">
+              <h2 className="text-3xl font-bold tracking-tighter">
+                {(translation as any).index.latestBlogPostsHeader}
+              </h2>
+              <BlogPostsGroup translation={translation}
+                posts={
+                  posts?.map((post) => {
+                    return {
+                      ...post,
+                      slug: `/blog/${post.slug}`,
+                    };
+                  }) as IBlogPost[]
+                }
+              />
+            </div>
+          </Container>
+        </SidebarLayout.Left>
+        <SidebarLayout.Right>
+          <SidebarLayout.UserPart translation={(translation as any).sidebar} />
+        </SidebarLayout.Right>
+      </SidebarLayout.Root>
     </Fragment>
   );
 }

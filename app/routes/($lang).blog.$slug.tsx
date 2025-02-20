@@ -15,6 +15,7 @@ import ResourcesLinkGroup from '~/components/organisms/ResourcesLinkGroup'
 import SelectableCategoriesGroup from '~/components/organisms/SelectableCategoriesGroup'
 import Container from '~/components/templates/Container'
 import SidebarLayout from '~/components/templates/SidebarLayout'
+import useHighlight from '~/hooks/useHighlight'
 import { IBlogPost } from '~/types/contentful'
 import LocalizationUtils from '~/utils/localization'
 import MetaUtils from '~/utils/metas'
@@ -63,6 +64,7 @@ export async function loader({ request, context }: LoaderFunctionArgs) {
 }
 
 export default function BlogPostPage() {
+    useHighlight()
     const { post, postsRelatedByCategory, translation, resourcesRelatedByCategory } =
         useLoaderData<typeof loader>()
 
@@ -101,7 +103,7 @@ export default function BlogPostPage() {
                             )}
                         <hr className="!border-[#E4E4E4]" />
 
-                        <article className="prose-dark prose w-full max-w-[500px] prose-h2:tracking-tighter prose-h3:tracking-tighter prose-h4:tracking-tighter prose-img:w-full prose-img:rounded-lg [&_h2:first-of-type]:mt-0">
+                        <article className="prose-dark prose-pre:bg-[#22272e] prose-pre:break-words prose-pre:whitespace-pre-wrap prose-pre:overflow-x-auto prose w-full max-w-[500px] prose-h2:tracking-tighter prose-h3:tracking-tighter prose-h4:tracking-tighter prose-img:w-full prose-img:rounded-lg [&_h2:first-of-type]:mt-0">
                             <Markdown
                                 remarkPlugins={[remarkGfm]}
                                 rehypePlugins={[rehypeSlug, rehypeRaw]}
