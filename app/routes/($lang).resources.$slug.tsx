@@ -1,6 +1,6 @@
 import { LoaderFunctionArgs, MetaFunction } from '@remix-run/cloudflare'
 import { useLoaderData } from '@remix-run/react'
-import { List, ShoppingBag } from 'lucide-react'
+import { Eye } from 'lucide-react'
 import Markdown from 'react-markdown'
 import { Fragment } from 'react/jsx-runtime'
 import rehypeRaw from 'rehype-raw'
@@ -62,14 +62,15 @@ export default function ResourcePage() {
         useLoaderData<typeof loader>()
 
     return (
-        <Fragment>                <Navbar translation={(translation as any).sidebar}/>
+        <Fragment>                
+        <Navbar translation={(translation as any).sidebar}/>
         <SidebarLayout.Root>
             <SidebarLayout.Left translation={(translation as any).sidebar}>
                 <Container className="space-y-5">
                     <div>
                         <Button
                             variant="primary"
-                            className="flex !w-fit items-center !gap-x-1"
+                            className="flex !w-fit !items-center !gap-x-1"
                             url={resource.url!}
                             target={
                                 resource.url?.includes('test')
@@ -78,15 +79,9 @@ export default function ResourcePage() {
                             }
                         >
                             <p className="w-full text-start">
-                                {resource.url?.includes('test')
-                                    ? 'Hacer test'
-                                    : 'Ir'}
+                            {(translation as any).common.see}
                             </p>
-                            {resource.url?.includes('test') ? (
-                                <List className="size-6" />
-                            ) : (
-                                <ShoppingBag className="size-6" />
-                            )}
+                            <Eye className='size-6'/>
                         </Button>
                         <h1 className="mt-3 text-4xl font-bold tracking-tighter">
                             {resource.seoTitle}
@@ -115,7 +110,7 @@ export default function ResourcePage() {
                             <div className="space-y-5">
                                 <hr className="!border-[#E4E4E4]" />
                                 <h4 className="text-xl font-bold tracking-tighter">
-                                    También en esta categoría
+                                    {(translation as any).common.alsoInThisCategory}
                                 </h4>
                                 <ResourcesLinkGroup        translation={translation}
                                     resources={resourcesRelatedByCategory}
@@ -127,7 +122,7 @@ export default function ResourcePage() {
             <SidebarLayout.Right>
                 <SidebarLayout.UserPart translation={(translation as any).sidebar}/>
             </SidebarLayout.Right>
-        </SidebarLayout.Root></Fragment>
-
+        </SidebarLayout.Root>
+        </Fragment>
     )
 }

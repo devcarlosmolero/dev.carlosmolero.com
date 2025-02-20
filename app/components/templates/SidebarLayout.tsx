@@ -76,7 +76,7 @@ function Left({children, translation}:IComponentWithTranslation & {children:Reac
 
 function Right({children}:{children:ReactNode}) {
   return (
-    <div className="hidden min-h-[100vh] w-auto flex-col gap-y-5 border-l border-[#E4E4E4]/50 px-5 py-6 shadow md:flex lg:shadow-none xl:min-h-full">
+    <div className="hidden min-h-[100vh] w-[400px] w-auto flex-col gap-y-5 border-l border-[#E4E4E4]/50 px-5 py-6 shadow md:flex lg:shadow-none xl:min-h-full">
       {children}
     </div>
   );

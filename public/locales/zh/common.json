@@ -1,4 +1,7 @@
 {
     "noResourcesMessage": "没有资源... 暂时",
-    "noBlogPostsMessage": "没有帖子... 暂时"
+    "noBlogPostsMessage": "没有帖子... 暂时",
+    "go": "去",
+    "see": "看",
+    "alsoInThisCategory": "此类别中的其他内容"
   }

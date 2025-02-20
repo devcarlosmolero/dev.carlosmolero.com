@@ -1,4 +1,7 @@
 {
     "noResourcesMessage": "No resources... Yet",
-    "noBlogPostsMessage": "No posts... Yet"
+    "noBlogPostsMessage": "No posts... Yet",
+    "go": "Go",
+    "see": "See",
+    "alsoInThisCategory": "Also in this category"
   }
