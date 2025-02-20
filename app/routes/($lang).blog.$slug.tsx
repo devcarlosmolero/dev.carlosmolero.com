@@ -67,70 +67,70 @@ export default function BlogPostPage() {
         useLoaderData<typeof loader>()
 
     return (
-<Fragment>
-<Navbar translation={(translation as any).sidebar}/>
-        <SidebarLayout.Root>
-            <SidebarLayout.Left translation={(translation as any).sidebar}> 
-                <Container className="space-y-5">
-                    <div>
-                        <h1 className="text-4xl font-bold tracking-tighter">
-                            {post.seoTitle}
-                        </h1>
-                        <p className="mt-2 text-gray-600">
-                            {post.seoDescription}
-                        </p>
-                        <div className="mt-3 flex flex-wrap gap-x-2">
-                            <SelectableCategoriesGroup
-                                categories={post.categories}
-                                categoryType="blog"
-                            />
+        <Fragment>
+            <Navbar translation={(translation as any).sidebar} />
+            <SidebarLayout.Root>
+                <SidebarLayout.Left translation={(translation as any).sidebar}>
+                    <Container className="space-y-5">
+                        <div>
+                            <h1 className="text-4xl font-bold tracking-tighter">
+                                {post.seoTitle}
+                            </h1>
+                            <p className="mt-2 text-gray-600">
+                                {post.seoDescription}
+                            </p>
+                            <div className="mt-3 flex flex-wrap gap-x-2">
+                                <SelectableCategoriesGroup
+                                    categories={post.categories}
+                                    categoryType="blog"
+                                />
+                            </div>
                         </div>
-                    </div>
-                    {resourcesRelatedByCategory &&
-                        resourcesRelatedByCategory.length > 0 && (
-                            <div className="space-y-5">
-                                <hr className="!border-[#E4E4E4]" />
-                                <h4 className="text-xl font-bold tracking-tighter">
-                                    Recursos en esta categoría
-                                </h4>
-                                <ResourcesLinkGroup
-                                translation={translation}
-                                    resources={resourcesRelatedByCategory}
-                                />
-                            </div>
-                        )}
-                    <hr className="!border-[#E4E4E4]" />
+                        {resourcesRelatedByCategory &&
+                            resourcesRelatedByCategory.length > 0 && (
+                                <div className="space-y-5">
+                                    <hr className="!border-[#E4E4E4]" />
+                                    <h4 className="text-xl font-bold tracking-tighter">
+                                        {(translation as any).common.resourcesInThisCategory}
+                                    </h4>
+                                    <ResourcesLinkGroup
+                                        translation={translation}
+                                        resources={resourcesRelatedByCategory}
+                                    />
+                                </div>
+                            )}
+                        <hr className="!border-[#E4E4E4]" />
 
-                    <article className="prose-dark prose w-full max-w-[500px] prose-h2:tracking-tighter prose-h3:tracking-tighter prose-h4:tracking-tighter prose-img:w-full prose-img:rounded-lg [&_h2:first-of-type]:mt-0">
-                        <Markdown
-                            remarkPlugins={[remarkGfm]}
-                            rehypePlugins={[rehypeSlug, rehypeRaw]}
-                        >
-                            {(post as unknown as IBlogPost).content}
-                        </Markdown>
-                    </article>
-                    {postsRelatedByCategory &&
-                        postsRelatedByCategory.length > 0 && (
-                            <div className="space-y-5">
-                                <hr className="!border-[#E4E4E4]" />
-                                <h4 className="text-xl font-bold tracking-tighter">
-                                    También en esta categoría
-                                </h4>
-                                <BlogPostsGroup
-                                       translation={translation}
-                                    showCategories={false}
-                                    posts={
-                                        postsRelatedByCategory as IBlogPost[]
-                                    }
-                                />
-                            </div>
-                        )}
-                </Container>
-            </SidebarLayout.Left>
-            <SidebarLayout.Right>
-                <SidebarLayout.UserPart translation={(translation as any).sidebar}/>
-            </SidebarLayout.Right>
-        </SidebarLayout.Root>
-</Fragment>
+                        <article className="prose-dark prose w-full max-w-[500px] prose-h2:tracking-tighter prose-h3:tracking-tighter prose-h4:tracking-tighter prose-img:w-full prose-img:rounded-lg [&_h2:first-of-type]:mt-0">
+                            <Markdown
+                                remarkPlugins={[remarkGfm]}
+                                rehypePlugins={[rehypeSlug, rehypeRaw]}
+                            >
+                                {(post as unknown as IBlogPost).content}
+                            </Markdown>
+                        </article>
+                        {postsRelatedByCategory &&
+                            postsRelatedByCategory.length > 0 && (
+                                <div className="space-y-5">
+                                    <hr className="!border-[#E4E4E4]" />
+                                    <h4 className="text-xl font-bold tracking-tighter">
+                                        También en esta categoría
+                                    </h4>
+                                    <BlogPostsGroup
+                                        translation={translation}
+                                        showCategories={false}
+                                        posts={
+                                            postsRelatedByCategory as IBlogPost[]
+                                        }
+                                    />
+                                </div>
+                            )}
+                    </Container>
+                </SidebarLayout.Left>
+                <SidebarLayout.Right>
+                    <SidebarLayout.UserPart translation={(translation as any).sidebar} />
+                </SidebarLayout.Right>
+            </SidebarLayout.Root>
+        </Fragment>
     )
 }

@@ -1,7 +1,8 @@
 {
-    "noResourcesMessage": "No resources... Yet",
-    "noBlogPostsMessage": "No posts... Yet",
-    "go": "Go",
-    "see": "See",
-    "alsoInThisCategory": "Also in this category"
-  }
+  "noResourcesMessage": "No resources... Yet",
+  "noBlogPostsMessage": "No posts... Yet",
+  "go": "Go",
+  "see": "See",
+  "alsoInThisCategory": "Also in this category",
+  "resourcesInThisCategory": "Resources in this category"
+}
